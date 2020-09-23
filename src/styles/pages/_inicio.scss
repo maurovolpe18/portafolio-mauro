@@ -1,0 +1,29 @@
+.inicio__container {
+  height: 100%;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.inicio__texto {
+  font-size: 4rem;
+  color: wheat;
+  font-family: font-file-82132;
+  -webkit-text-stroke: 1px black;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .inicio__container {
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10rem;
+  }
+  .inicio__texto {
+    font-size: 8rem;
+    color: wheat;
+    font-family: font-file-82132;
+    -webkit-text-stroke: 1px black;
+    text-align: justify;
+  }
+}

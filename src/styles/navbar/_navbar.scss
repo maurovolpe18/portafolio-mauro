@@ -1,0 +1,121 @@
+nav.link-text,
+.logo {
+  display: none;
+}
+.navbar {
+  display: flex;
+  background-color: $primary;
+  width: 100vw;
+  height: 5rem;
+  justify-content: center;
+}
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  font-size: 4rem;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    background-color: $primary;
+    position: fixed;
+    height: 100vh;
+    width: 12rem;
+    color: white;
+    transition: width 600ms ease;
+  }
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item:last-child {
+    margin-top: auto;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    color: $text-primary;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: $transition-speed;
+  }
+
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: darken($color: $primary, $amount: 4);
+    color: $text-secondary;
+  }
+
+  .link-text {
+    display: none;
+    margin-left: -1rem;
+    font-size: 2.2rem;
+  }
+
+  .navbar__icon {
+    width: 4rem;
+    min-width: 4rem;
+    margin: 0 3.5rem;
+    height: 3.5rem;
+  }
+
+  .navbar:hover {
+    width: 26rem;
+  }
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ececec;
+    background: darken($color: $primary, $amount: 4);
+    font-size: 4.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+  }
+
+  .navbar__icon-logo {
+    transform: rotate(0deg);
+    margin: 0 auto;
+    font-size: 5rem;
+    transition: $transition-speed;
+  }
+
+  .navbar:hover .navbar__icon-logo {
+    transform: rotate(-180deg);
+    color: $text-secondary;
+  }
+
+  .navbar:hover .logo-text {
+    display: inline;
+    left: 0;
+    left: -999px;
+    transition: $transition-speed;
+  }
+}

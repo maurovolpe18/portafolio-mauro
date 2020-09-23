@@ -1,0 +1,109 @@
+.navbar {
+  background-color: wheat;
+}
+.nav-item {
+  display: flex;
+}
+.link-text {
+  margin-left: 3rem;
+}
+.navbar__icon {
+  font-size: 2rem;
+}
+.navbar__icon-logo {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navbar {
+    height: 100vh;
+    background-color: $primary;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    transition: $transition-speed;
+    &:hover {
+      width: 26rem;
+    }
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  .nav-item {
+    display: flex;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    align-items: center;
+    transition: $transition-speed;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    color: $secundary !important;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: $transition-speed;
+  }
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    color: $secundary !important;
+  }
+
+  .link-text {
+    display: none;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  .logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ececec;
+    background: darken($color: $primary, $amount: 4);
+    font-size: 4.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+  }
+  .navbar__icon {
+    font-size: 4rem;
+  }
+
+  .navbar__icon-logo {
+    display: block;
+    transform: rotate(0deg);
+    color: $secundary;
+    margin: 0 auto;
+    font-size: 5rem;
+    transition: $transition-speed;
+  }
+
+  .navbar:hover .navbar__icon-logo {
+    transform: rotate(-180deg);
+    color: $text-secondary;
+    margin-left: 1rem;
+  }
+
+  .navbar:hover .logo-text {
+    display: inline;
+    font-weight: bold;
+    font-family: font-file-82132;
+    color: $secundary;
+    font-size: 3rem;
+    left: 0;
+    left: -999px;
+    padding-left: 1rem;
+    transition: $transition-speed;
+  }
+}
